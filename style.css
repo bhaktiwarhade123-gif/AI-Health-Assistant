@@ -1,0 +1,478 @@
+/* =====================================
+   AI HEALTH ASSISTANT - STYLE
+   ===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* -------------------------------------
+   BODY
+   ------------------------------------- */
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f8fc;
+    color: #263746;
+    min-height: 100vh;
+    padding: 30px 15px;
+}
+
+
+/* -------------------------------------
+   MAIN CONTAINER
+   ------------------------------------- */
+
+.container {
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+}
+
+
+/* -------------------------------------
+   HEADER
+   ------------------------------------- */
+
+header {
+    background: white;
+    padding: 25px;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.07);
+}
+
+.logo {
+    width: 65px;
+    height: 65px;
+    border-radius: 15px;
+    background: #e8f3ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 34px;
+}
+
+header h1 {
+    font-size: 30px;
+    margin-bottom: 6px;
+}
+
+header p {
+    color: #71808d;
+    font-size: 15px;
+}
+
+
+/* -------------------------------------
+   MAIN CARD
+   ------------------------------------- */
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.07);
+    margin-bottom: 20px;
+}
+
+.card > h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.description {
+    color: #687985;
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.input-tip {
+    font-size: 13px;
+    color: #71808d;
+    margin-bottom: 18px;
+}
+
+
+/* -------------------------------------
+   INPUT AREA
+   ------------------------------------- */
+
+.input-area {
+    position: relative;
+}
+
+textarea {
+    width: 100%;
+    min-height: 150px;
+    resize: vertical;
+    padding: 18px 60px 18px 18px;
+    border: 2px solid #dce6ee;
+    border-radius: 14px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    outline: none;
+    color: #263746;
+}
+
+textarea:focus {
+    border-color: #6aa9df;
+}
+
+textarea::placeholder {
+    color: #9aa8b2;
+}
+
+
+/* -------------------------------------
+   MICROPHONE BUTTON
+   ------------------------------------- */
+
+.mic-button {
+    position: absolute;
+    right: 14px;
+    top: 14px;
+    width: 44px;
+    height: 44px;
+    border: none;
+    border-radius: 50%;
+    background: #e8f3ff;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.mic-button:hover {
+    transform: scale(1.05);
+    background: #d8ebfb;
+}
+
+
+/* -------------------------------------
+   BUTTONS
+   ------------------------------------- */
+
+.buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.analyze-button,
+.clear-button,
+.speak-button {
+    border: none;
+    border-radius: 10px;
+    padding: 13px 20px;
+    font-size: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.analyze-button {
+    background: #4d91c9;
+    color: white;
+    flex: 1;
+}
+
+.analyze-button:hover {
+    background: #3f82b8;
+}
+
+.analyze-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.clear-button {
+    background: #edf1f4;
+    color: #45545f;
+    min-width: 100px;
+}
+
+.clear-button:hover {
+    background: #e1e7eb;
+}
+
+
+/* -------------------------------------
+   VOICE STATUS
+   ------------------------------------- */
+
+.voice-status {
+    min-height: 20px;
+    margin-top: 12px;
+    text-align: center;
+    font-size: 14px;
+    color: #5d778b;
+}
+
+
+/* -------------------------------------
+   RESULT
+   ------------------------------------- */
+
+.result {
+    margin-top: 25px;
+    padding: 22px;
+    border-radius: 15px;
+    background: #f7fbfe;
+    border: 1px solid #dceaf3;
+}
+
+.result.hidden {
+    display: none;
+}
+
+.result > h2 {
+    font-size: 21px;
+    margin-bottom: 18px;
+}
+
+
+/* -------------------------------------
+   CONDITION BOX
+   ------------------------------------- */
+
+.condition-box {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    border-left: 5px solid #4d91c9;
+    margin-bottom: 18px;
+}
+
+.small-title {
+    font-size: 13px;
+    color: #758692;
+    margin-bottom: 7px;
+}
+
+.condition-box h3 {
+    font-size: 23px;
+    margin-bottom: 8px;
+}
+
+#confidence {
+    color: #4d91c9;
+    font-weight: bold;
+}
+
+
+/* -------------------------------------
+   INFORMATION SECTIONS
+   ------------------------------------- */
+
+.info-section {
+    background: white;
+    padding: 18px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.info-section h3 {
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.info-section ul {
+    padding-left: 22px;
+}
+
+.info-section li {
+    margin-bottom: 7px;
+    line-height: 1.4;
+}
+
+
+/* -------------------------------------
+   SPEAK BUTTON
+   ------------------------------------- */
+
+.speak-button {
+    background: #5f9f83;
+    color: white;
+    width: 100%;
+}
+
+.speak-button:hover {
+    background: #508e73;
+}
+
+
+/* -------------------------------------
+   HEALTHY HABITS
+   ------------------------------------- */
+
+.tips-card {
+    background: white;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.07);
+    margin-bottom: 20px;
+}
+
+.tips-card h2 {
+    font-size: 21px;
+    margin-bottom: 18px;
+}
+
+.tips {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.tip {
+    background: #f5faf8;
+    border: 1px solid #e1eee8;
+    border-radius: 12px;
+    padding: 16px 10px;
+    text-align: center;
+    font-size: 23px;
+}
+
+.tip span {
+    display: block;
+    font-size: 13px;
+    margin-top: 8px;
+    color: #53656f;
+}
+
+
+/* -------------------------------------
+   HOW IT WORKS
+   ------------------------------------- */
+
+.how-card {
+    background: white;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.07);
+    margin-bottom: 20px;
+}
+
+.how-card > h2 {
+    font-size: 21px;
+    margin-bottom: 20px;
+}
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.step {
+    display: flex;
+    gap: 12px;
+    background: #f8fafc;
+    padding: 17px;
+    border-radius: 12px;
+}
+
+.step-number {
+    min-width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #4d91c9;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.step h3 {
+    font-size: 15px;
+    margin-bottom: 6px;
+}
+
+.step p {
+    color: #71808d;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+
+/* -------------------------------------
+   DISCLAIMER
+   ------------------------------------- */
+
+.disclaimer {
+    background: #fff8e8;
+    border: 1px solid #f0dfb8;
+    color: #665c48;
+    padding: 15px 18px;
+    border-radius: 12px;
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+
+/* -------------------------------------
+   FOOTER
+   ------------------------------------- */
+
+footer {
+    text-align: center;
+    color: #87949d;
+    font-size: 13px;
+    padding: 10px;
+}
+
+
+/* -------------------------------------
+   MOBILE RESPONSIVE
+   ------------------------------------- */
+
+@media (max-width: 700px) {
+
+    body {
+        padding: 15px 10px;
+    }
+
+    header {
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    .card,
+    .tips-card,
+    .how-card {
+        padding: 20px;
+    }
+
+    .tips {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .steps {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 450px) {
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    .clear-button {
+        width: 100%;
+    }
+
+}

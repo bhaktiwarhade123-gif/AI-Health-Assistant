@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Health Assistant</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+        <header>
+
+            <div class="logo">
+                🩺
+            </div>
+
+            <div>
+                <h1>AI Health Assistant</h1>
+
+                <p>
+                    Understand your symptoms. Get simple health guidance.
+                </p>
+            </div>
+
+        </header>
+
+
+        <!-- Main Card -->
+        <div class="card">
+
+            <h2>How are you feeling today?</h2>
+
+            <p class="description">
+                Enter your symptoms below or describe them using the microphone.
+            </p>
+
+            <p class="input-tip">
+                💡 Tip: You can type your symptoms or speak them using the microphone.
+            </p>
+
+
+            <!-- Input Area -->
+            <div class="input-area">
+
+                <textarea
+                    id="symptoms"
+                    placeholder="Example: fever, cough, headache, sore throat..."
+                ></textarea>
+
+                <button
+                    id="micButton"
+                    class="mic-button"
+                    onclick="startListening()"
+                    title="Speak your symptoms"
+                >
+                    🎤
+                </button>
+
+            </div>
+
+
+            <!-- Buttons -->
+            <div class="buttons">
+
+                <button
+                    class="analyze-button"
+                    onclick="analyzeSymptoms()"
+                >
+                    🔍 Analyze Symptoms
+                </button>
+
+                <button
+                    class="clear-button"
+                    onclick="clearInput()"
+                >
+                    Clear
+                </button>
+
+            </div>
+
+
+            <!-- Voice Status -->
+            <p
+                id="voiceStatus"
+                class="voice-status"
+            ></p>
+
+
+            <!-- Result -->
+            <div
+                id="result"
+                class="result hidden"
+            >
+
+                <h2>🤖 Health Analysis</h2>
+
+
+                <!-- Condition -->
+                <div class="condition-box">
+
+                    <p class="small-title">
+                        Possible Condition
+                    </p>
+
+                    <h3 id="condition"></h3>
+
+                    <p id="confidence"></p>
+
+                </div>
+
+
+                <!-- Matched Symptoms -->
+                <div class="info-section">
+
+                    <h3>🩺 Symptoms Detected</h3>
+
+                    <ul id="matchedSymptoms"></ul>
+
+                </div>
+
+
+                <!-- Advice -->
+                <div class="info-section">
+
+                    <h3>💡 General Advice</h3>
+
+                    <ul id="advice"></ul>
+
+                </div>
+
+
+                <!-- Speak Result -->
+                <button
+                    class="speak-button"
+                    onclick="speakResult()"
+                >
+                    🔊 Listen to Result
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- Healthy Habits -->
+        <div class="tips-card">
+
+            <h2>🌿 Healthy Habits</h2>
+
+            <div class="tips">
+
+                <div class="tip">
+                    💧
+                    <span>Drink enough water</span>
+                </div>
+
+                <div class="tip">
+                    😴
+                    <span>Get enough sleep</span>
+                </div>
+
+                <div class="tip">
+                    🥗
+                    <span>Eat healthy food</span>
+                </div>
+
+                <div class="tip">
+                    🏃
+                    <span>Exercise regularly</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- How It Works -->
+        <div class="how-card">
+
+            <h2>⚙️ How It Works</h2>
+
+            <div class="steps">
+
+                <div class="step">
+
+                    <div class="step-number">
+                        1
+                    </div>
+
+                    <div>
+                        <h3>Enter Symptoms</h3>
+
+                        <p>
+                            Type your symptoms or describe them using your voice.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="step">
+
+                    <div class="step-number">
+                        2
+                    </div>
+
+                    <div>
+                        <h3>AI Analysis</h3>
+
+                        <p>
+                            The system compares your symptoms with stored health information.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="step">
+
+                    <div class="step-number">
+                        3
+                    </div>
+
+                    <div>
+                        <h3>Get Guidance</h3>
+
+                        <p>
+                            The system shows a possible matching condition and general advice.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Disclaimer -->
+        <div class="disclaimer">
+
+            ⚠️
+            <b>Important:</b>
+
+            This tool provides general health information and is not a
+            substitute for professional medical diagnosis or treatment.
+
+        </div>
+
+
+        <!-- Footer -->
+        <footer>
+
+            AI Health Assistant • Mini Project
+
+        </footer>
+
+    </div>
+
+
+    <!-- JavaScript -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
